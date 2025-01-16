@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",          // Latest ECMAScript version
+    "module": "ESNext",          // Use ECMAScript modules
+    "jsx": "react-jsx",          // Enable JSX support
+    "strict": true,              // Enable all strict checks
+    "esModuleInterop": true,     // For compatibility with CommonJS modules
+    "moduleResolution": "node",  // Use Node.js module resolution
+    "skipLibCheck": true,        // Skip checking types of declaration files
+    "outDir": "./dist",          // Output compiled files to ./dist
+    "rootDir": "./src"           // Root directory for source files
+  },
+  "include": ["src/**/*"],        // Include all files under src
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist folders
+}
