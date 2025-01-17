@@ -2,6 +2,7 @@
   "name": "astrology",
   "version": "1.0.0",
   "scripts": {
+    "build":"tsc",
     "main": "./dist/server.js",
     "dev": "tsx src/server.ts"
   },

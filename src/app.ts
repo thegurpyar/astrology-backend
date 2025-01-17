@@ -1,9 +1,11 @@
-import express from "express";
+import express, { Request, Response } from "express";
+
 
 const initializeServer = () => {
   const app = express();
 
-  app.get("/", (_, res) => {
+  // @ts-ignore
+  app.get("/", (_: Request, res: Response) => {
     return res.send("API is running");
   });
 
