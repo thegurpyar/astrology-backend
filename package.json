@@ -2,8 +2,8 @@
   "name": "astrology",
   "version": "1.0.0",
   "scripts": {
-    "build":"tsc",
-    "main": "./dist/server.js",
+    "build": "tsc",
+    "start": "./dist/server.js",
     "dev": "tsx src/server.ts"
   },
   "license": "MIT",
