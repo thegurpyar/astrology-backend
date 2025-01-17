@@ -1,14 +1,15 @@
 import express, { Request, Response } from "express";
-
+import morgan from 'morgan'; 
 
 const initializeServer = () => {
   const app = express();
+
+  app.use(morgan('dev'));
 
   // @ts-ignore
   app.get("/", (_: Request, res: Response) => {
     return res.send("API is running");
   });
-
 
   return app;
 };
@@ -26,4 +27,9 @@ const startServer = async () => {
   return server;
 };
 
-export { initializeServer, startServer };
+startServer()
+  .then(() => {})
+  .catch((error) => {
+    console.error(error.message);
+  });
+
