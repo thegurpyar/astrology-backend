@@ -2,10 +2,12 @@
   "name": "astrology",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc",
-    "start": "./dist/server.js",
-    "dev": "tsx src/server.ts"
+    "clean": "rimraf dist",
+    "build": "rimraf dist && tsc",
+    "start": "node ./dist/app.js",
+    "dev": "tsx watch src/app.ts"
   },
+  "type": "module",
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.18.0",
@@ -19,7 +21,10 @@
   },
   "dependencies": {
     "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
     "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "rimraf": "^6.0.1",
     "tsx": "^4.19.2"
   }
 }
