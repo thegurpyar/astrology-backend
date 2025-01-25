@@ -1,11 +1,12 @@
 import express, { Request, Response } from "express";
 import morgan from 'morgan'; 
-
+import routes from "./routes";
 const initializeServer = () => {
   const app = express();
 
   app.use(morgan('dev'));
-
+  app.use(express.json());
+  routes(app);
   // @ts-ignore
   app.get("/", (_: Request, res: Response) => {
     return res.send("API is running");
