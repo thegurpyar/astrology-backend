@@ -1,5 +1,5 @@
-import userModel from "../../models/User.Model";
-import userAuthModel from "../../models/UserAuth.model"; // If you need to store the token
+import userModel from "../../models/User.Model.js";
+import userAuthModel from "../../models/UserAuth.model.js"; // If you need to store the token
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 

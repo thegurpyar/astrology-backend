@@ -1,6 +1,6 @@
-import { API_VERSION } from "../constants/AppConstant";
-import userRoutes from "./user/User.Route";
-import otpRoutes from "./otp/Otp.Route"
+import { API_VERSION } from "../constants/AppConstant.js";
+import userRoutes from "./user/User.Route.js";
+import otpRoutes from "./otp/Otp.Route.js"
 
 const routes = (app:any) => {
   

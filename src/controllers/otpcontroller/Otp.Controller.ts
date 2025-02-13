@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import { emailValidator, verifyOtpValidator } from "../../validators/otpvalidator/Otp.validator";
-import { sendOtpService, verifyOtpService } from "../../services/otpservices/SendOtp.Services";
+import { emailValidator, verifyOtpValidator } from "../../validators/otpvalidator/Otp.validator.js";
+import { sendOtpService, verifyOtpService } from "../../services/otpservices/SendOtp.Services.js";
 
 export const sendOtpController = asyncHandler((async(req:Request,res:Response)=>{
     const {error} = emailValidator(req.body);
