@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import morgan from 'morgan'; 
-import routes from "./routes";
+import routes from "./routes/index.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 dotenv.config();

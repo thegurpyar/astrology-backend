@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import userRegisterValidator from "../../validators/uservalidator/User.Register.validator";
-import { userRegistrationService } from "../../services/userservices/User.Auth.Services";
+import userRegisterValidator from "../../validators/uservalidator/User.Register.validator.js";
+import { userRegistrationService } from "../../services/userservices/User.Auth.Services.js";
 
 export const userRegistrationController = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {

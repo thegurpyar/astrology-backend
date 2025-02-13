@@ -1,5 +1,4 @@
-import OtpModel from "../../models/Otp.Model";
-import userModel from "../../models/User.Model";
+import OtpModel from "../../models/Otp.Model.js";
 import crypto from "crypto";
 import dayjs from "dayjs";
 import jwt from "jsonwebtoken";
