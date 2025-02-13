@@ -1,5 +1,6 @@
 import Joi from "joi";
 import JoiDate from "@joi/date";
+import passwordComplexity from "joi-password-complexity";
 
 const ExtendedJoi = Joi.extend(JoiDate);
 const userRegisterValidator = (data:any)=>{
@@ -10,7 +11,14 @@ const userRegisterValidator = (data:any)=>{
         zodiacSign: ExtendedJoi.string().trim().required(),
         country: ExtendedJoi.string().trim().required(),
         city: ExtendedJoi.string().trim().required(),
-        tempToken:ExtendedJoi.string().required(),
+        password: passwordComplexity({
+            min: 8,
+            max: 30,
+            lowerCase: 1,
+            upperCase: 1,
+            numeric: 1,
+            symbol: 1,
+          }).required(),
         phone: ExtendedJoi.string()
         .pattern(/^[+]?[0-9]{10}$/) // Supports optional "+" and 10-15 digits
         .required()

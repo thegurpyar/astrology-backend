@@ -7,12 +7,7 @@ import jwt from "jsonwebtoken";
 export const sendOtpService = async (data: any) => {
     const { email } = data;
 
-    // Check if user exists
-    const user = await userModel.findOne({ email });
-    if (!user) {
-        return { success: false, message: "Email not registered" };
-    }
-
+    console.log("first")
     // Check if OTP was already sent within the last 1 minute
     const existingOtp = await OtpModel.findOne({ email });
     if (existingOtp) {

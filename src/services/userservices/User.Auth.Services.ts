@@ -3,8 +3,8 @@ import userAuthModel from "../../models/UserAuth.model"; // If you need to store
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
-export const userRegistrationService = async (body: any) => {
-    const { name, email, phone, password, zodiacSign, country, city, DOB, birthTime, birthPlace,tempToken } = body;
+export const userRegistrationService = async (body: any,tempToken:any) => {
+    const { name, email, phone, password, zodiacSign, country, city, DOB, birthTime, birthPlace } = body;
 
     // Verify temporary token before proceeding
     try {
@@ -36,7 +36,6 @@ export const userRegistrationService = async (body: any) => {
         birthTime,
         birthPlace,
     });
-
     const token = jwt.sign({ id: newUser._id, email: newUser.email }, process.env.JWT_SECRET!, { expiresIn: "7d" });
 
     return { success: true, message: "User registered successfully", token };
