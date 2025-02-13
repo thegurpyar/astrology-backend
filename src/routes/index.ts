@@ -1,11 +1,12 @@
 import { API_VERSION } from "../constants/AppConstant";
 import userRoutes from "./user/User.Route";
-
+import otpRoutes from "./otp/Otp.Route"
 
 const routes = (app:any) => {
   
     // user routes
     app.use(`/${API_VERSION}/users`, userRoutes);
+    app.use(`/${API_VERSION}/otp`, otpRoutes);
     // app.use(`/${API_VERSION}/users/select-cars`, selectCarRoutes);
     // app.use(`/${API_VERSION}/users/bookings`, bookingRoutes);
   
